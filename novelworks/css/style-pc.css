@@ -23,12 +23,31 @@ br.only-m:after {content: '\00a0';}
 
 /* common */
 body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif; font-weight: 400; font-size: 14px; color: #222222; background: #ffffff;}
+#wrapper {}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; text-align: center; line-height: 40px; font-size: 16px; background: rgba(0, 0, 0, 0.6); color: #ffffff; transition: top 0.3s; z-index: 10000;}
+#skip-nav:focus {top: 0;}
 
+#header {position: fixed; left: 0; top: 0; width: 100%; height: 100px; background: pink;}
+#header::before {content: ''; position: absolute; left: 0; top: 100px; width: 100%; height: 0; background: yellow;}
+#header h1 {position: absolute; left: 30px; top: 0;}
+#gnb {position: absolute; left: 300px; top: 0; height: 100px; overflow: hidden; text-align: center; background: yellow;}
+#gnb > ul > li {float: left; width: 140px;}
+#gnb > ul > li + li {margin-left: 5px;}
+#gnb > ul > li > a {position: relative; display: block; line-height: 100px; background: lime;}
+#gnb > ul > li > a::after {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 0; height: 1px; background: #000000; transition: width 0.3s;}
+#gnb > ul > li > a:hover::after {width: 100%;}
+#gnb > ul > li > ul {margin-top: 30px;}
+#gnb > ul > li > ul > li + li {margin-top: 5px;}
+#gnb > ul > li > ul > li > a {display: block; line-height: 30px;}
 
+#header.on {background: #ffffff;}
+#header.on #gnb {height: 300px;}
+#header.on::before {height: 200px;}
 
-
-
-
+#top-lang {position: absolute; right: 150px; top: 50%; transform:  translate(0, -50%);}
+#top-lang li {float: left;}
+#top-lang li a {display: block; width: 80px; line-height: 50px; background: blue;}
+#header a.sitemap {position: absolute; right: 30px; top: 50%; transform: translate(0, -50%); font-size: 20px; background: yellow; line-height: 1px;}
 
 
 
